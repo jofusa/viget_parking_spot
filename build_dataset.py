@@ -52,12 +52,12 @@ taken = ['./taken-crop/' + f for f in os.listdir('./taken-crop/')]
 #Change the sample amount to increase or decrease the training size
 # I have purposely resampled the data set to keep class inbalance from becoming
 # an issue
-for image in random.sample(taken,10):
+for image in random.sample(taken,800):
     labels.append('taken')
     img = img_to_feature_vector(image)
     data.append(img)
 
-for image in random.sample(available,10):
+for image in random.sample(available,800):
     labels.append('available')
     img = img_to_feature_vector(image)
     data.append(img)
